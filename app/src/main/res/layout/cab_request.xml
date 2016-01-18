@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Request"
+        android:id="@+id/rqTitle"
+        android:layout_gravity="top"
+        android:layout_alignParentTop="true"
+        android:textSize="50dp"
+        android:gravity="top|center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startLocation"
+        android:textSize="15dp"
+        android:enabled="true"
+        android:layout_below="@+id/rqTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="53dp"
+            android:src="@drawable/direction_arrow"
+            android:id="@+id/imageView1"
+            android:layout_below="@+id/stLocation"
+            android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/endLocation"
+        android:layout_gravity="right"
+        android:textSize="15dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="end"/>
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stLocation"
+        android:text="Start"
+        android:layout_weight="1.07"
+        android:textSize="30dp"
+        android:layout_below="@+id/startLocation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enLocation"
+        android:text="End"
+        android:layout_weight="0.31"
+        android:textSize="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/respBtn"
+        android:layout_alignStart="@+id/respBtn"
+        android:gravity="end"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:id="@+id/tpCost"
+        android:textSize="30dp"
+        android:layout_gravity="left|center_vertical"
+        android:layout_below="@+id/locationMapping"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="37dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_gravity="right|center_vertical"
+        android:layout_weight="0.49"
+        android:hint="R0.00"
+        android:textSize="25dp"
+        android:paddingLeft="10dp"
+        android:layout_alignTop="@+id/tpCost"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Map"
+        android:id="@+id/locationMapping"
+        android:clickable="false"
+        android:nestedScrollingEnabled="false"
+        android:onClick="mapLocations"
+        android:layout_below="@+id/enLocation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Respond"
+        android:id="@+id/respBtn"
+        android:layout_gravity="left|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decline"
+        android:id="@+id/decBtn"
+        android:layout_gravity="right|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
