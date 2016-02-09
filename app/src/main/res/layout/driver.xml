@@ -3,60 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/back" >
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Full Name"
-        android:id="@+id/fullName"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Livessssss"
-        android:id="@+id/lives"
-        android:layout_below="@+id/license"
-        android:layout_alignLeft="@+id/conDet"
-        android:layout_alignStart="@+id/conDet"
-        android:layout_marginTop="51dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Contact Details"
-        android:id="@+id/conDet"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignRight="@+id/license"
-        android:layout_alignEnd="@+id/license" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="License Number"
-        android:id="@+id/license"
-        android:layout_below="@+id/conDet"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="53dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Number of Request"
-        android:id="@+id/numReq"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    android:background="@drawable/background" >
 
     <ImageView
         android:layout_width="wrap_content"
@@ -65,5 +12,53 @@
         android:src="@drawable/persondriver"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:paddingBottom="18dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@+id/imageView2"
+    android:id="@+id/linearLayout">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fullName"
+        android:layout_gravity="right"
+        android:text="Full Name"
+        android:paddingBottom="18dp"
+        android:clickable="false"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/licenseNo"
+        android:text="License Number"
+        android:paddingBottom="18dp"
+        android:clickable="false"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contact"
+        android:layout_gravity="center_horizontal"
+        android:text="Phone Number"
+        android:paddingBottom="18dp"
+        android:clickable="false"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/requests"
+        android:layout_below="@+id/linearLayout"
+        android:text="Number of Requests"
+        android:paddingBottom="18dp"
+        android:clickable="false"/>
+</LinearLayout>
+
+
+
 </RelativeLayout>

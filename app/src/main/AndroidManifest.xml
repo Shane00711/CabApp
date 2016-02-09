@@ -43,10 +43,12 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".Login_Driver"
-            android:label="Login"></activity>
+            android:name="triospec.cabapp.activity.Login_Driver"
+            android:label="Login"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
         <activity
-            android:name=".RegisterActivtiy"
+            android:name="triospec.cabapp.activity.RegisterActivtiy"
             android:label="Register"></activity>
         <activity
             android:name=".RequestActivity"
@@ -61,6 +63,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainScreenActivity">
+        </activity>
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -72,6 +76,7 @@
         <activity
             android:name=".HomeScreen"
             android:label="@string/title_activity_home_screen"></activity>
+        <service android:name=".RequestService"/>
     </application>
 
 </manifest>

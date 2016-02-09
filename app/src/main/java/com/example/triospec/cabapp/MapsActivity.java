@@ -15,6 +15,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.os.AsyncTask;
@@ -131,9 +132,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     //Getting location from Request Activity
-
-
-
 
         //Getting a refernece to the AutoCompleteTextView
         atvPlaces = (AutoCompleteTextView)findViewById(R.id.atv_places);
@@ -757,6 +755,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             markerOptions.title(addressText);
             mMap.addMarker(markerOptions);
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
