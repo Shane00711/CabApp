@@ -76,7 +76,8 @@
         <activity
             android:name=".HomeScreen"
             android:label="@string/title_activity_home_screen"></activity>
-        <service android:name=".RequestService"/>
+        <service android:name=".RequestService"
+            android:exported="false"/>
     </application>
 
 </manifest>
